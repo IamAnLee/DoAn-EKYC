@@ -41,35 +41,41 @@ body {}
 }
 .div{
     width: auto;
-    height: 400px;
+    height: 300px;
 }
 .div > #image_upload_preview {
-    border: none;
-    outline: none;
     background-color: #ffffff;
     margin-top: 1em;
-    width: 40%;
-    height: auto;
+    width: 30%;
+    max-height: 80%;
 }
 
 #image_upload_preview2 {
-    border: none;
-    outline: none;
     background-color: #ffffff;
     margin-top: 1em;
-    width: 40%;
-    height: auto;
+    width: 30%;
+    max-height: 80%;
 }
-.logo > img  {
- width: 15%;
+.logo>img{
+    margin-top: 15px;
+    width: 17%;
+    color: #333;
+}
+.cam>video{
+    border:3px solid rgba(21, 156, 33, 0.897);
+    border-radius: 80%;
+    width:30%; 
+    box-shadow: #333;
+    height:auto;
 }
 .title{
     width: 100%;
     height: auto;
     text-align: center;
-    padding-top: 2%;
+
 }  
 .content{
+    text-align: center;
     margin: 3rem 0rem;
 }
 .alert{
