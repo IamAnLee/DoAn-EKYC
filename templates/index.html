@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../static/style.css" />
+  <link rel="stylesheet" href="../static/style.js" />
+  <link rel="stylesheet" href="../static/app.css" />
+  <link rel="stylesheet" href="../static/app.js" />
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 logo">
+        <img src="image/z3462998051250_82f8c2a2289ee537e17395f4a2d011ad.jpg" alt="">
+      </div>
+      <div class="col-lg-2">
+        <nav>
+          <ul>
+            <li>
+              <div class="home-icon">
+                <a href="/index"><img src="../static/img/electronics.png" alt="" /></a>
+              </div>
+            </li>
+
+            <li>
+              <a href=""></a>
+              <div class="home-icon">
+                <a href="/ekyc-stp1"><img src="../static/img/ekyc.png" alt="" /></a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-lg-10 main">
+        <div class="title">
+          <h1>FaceMatching</h1>
+          <h3>Đối sánh khuôn mặt</h3>
+        </div>
+        <div class="content">
+          <form class="form-group" action="/index" method="post" enctype="multipart/form-data">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="original_image" id="inputFile"
+                      id="inputGroupFile02" />
+                    <label class="form-control custom-file-label" for="inputGroupFile02">Khuôn mặt thứ nhất</label>
+                  </div>
+                  <div class="div">
+                    <img id="image_upload_preview" alt="" />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="to_compare_image" id="inputFile2"
+                      id="inputGroupFile02" />
+                    <label class="form-control custom-file-label" for="inputGroupFile02">Khuôn mặt thứ hai</label>
+                  </div>
+                  <img id="image_upload_preview2" alt="" />
+                </div>
+              </div>
+              <input type="submit" class="btn btn-success btn-lg btn-block" value="Phân Tích" />
+              {% if message %}
+              <div style="text-align: center" class="alert alert-success" role="alert">
+                {{ message }}
+              </div>
+              {% endif %}
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    function showOriginalImage(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          $("#image_upload_preview").attr("src", e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    function showToCompareImage(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          $("#image_upload_preview2").attr("src", e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $("#inputFile").change(function () {
+      showOriginalImage(this);
+    });
+
+    $("#inputFile2").change(function () {
+      showToCompareImage(this);
+    });
+  </script>
+</body>
+
+</html>

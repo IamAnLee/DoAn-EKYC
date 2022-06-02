@@ -1,0 +1,182 @@
+body {}
+
+.image-preview-input {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.image-preview-input input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.image-preview-input-title {
+    margin-left: 2px;
+}
+
+
+.btn-success {
+    margin-top: 1em;
+    width: 75%;
+    align-items: center;
+}
+
+.custom-file-label {
+    text-align: center;
+    align-items: center;
+}
+.custom-file-input{
+    border: 1rem solid #0000;
+}
+.div{
+    width: auto;
+    height: 400px;
+}
+.div > #image_upload_preview {
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    margin-top: 1em;
+    width: 40%;
+    height: auto;
+}
+
+#image_upload_preview2 {
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    margin-top: 1em;
+    width: 40%;
+    height: auto;
+}
+.logo > img  {
+ width: 15%;
+}
+.title{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-top: 2%;
+}  
+.content{
+    margin: 3rem 0rem;
+}
+.alert{
+margin-top: 3rem;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:after {
+    content: "";
+}
+
+
+body {
+    padding:0;
+    background: #ffffff;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    
+}
+
+nav {
+    float: left;
+    position: relative;
+    top: 0rem;
+    left: 0;
+    background: transparent;
+    opacity: 0,6;
+    
+}
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    position: relative;
+    width: 70px;
+    height: 90px;
+    margin-top: 3px;
+    cursor: pointer;
+    /* box-shadow: 6px 5px; */
+    /* background: rgb(96, 240, 103); */
+    background: linear-gradient(rgb(96, 240, 103), rgb(9, 145, 15));
+    text-transform: uppercase;
+    transition: all .4s ease-out;
+    opacity: 0,5;
+}
+
+nav ul li:after {
+    position: absolute;
+    background: linear-gradient(-125deg,rgb(96, 240, 103), rgb(9, 145, 15));
+    color: rgb(10, 3, 5);
+    top: 0;
+    left: 70px;
+    width: 10em;
+    font-size: medium;
+    height: 100%;
+    opacity: .5;
+    /* box-shadow: 6px 5px; */
+    transform: perspective(400px) rotateY(90deg);
+    transform-origin: 0 100%;
+    transition: all .4s ease-out;
+}
+
+nav ul li:nth-child(1):after {
+    content: "FaceMatching";
+    line-height: 89px;
+
+}
+
+nav ul li:nth-child(2):after {
+    content: "EKYC";
+    line-height: 89px;
+
+}
+
+
+
+nav ul li:hover {
+    transform: translateZ(-70px);
+}
+
+nav ul li:hover:after {
+    opacity: 0.7;
+    transform: perspective(400px) rotateY(0deg) scale(1);
+}
+
+
+nav ul li>div {
+    text-align: center;
+    display: inline-block;
+    padding: 18px 0;
+    background: transparent;
+}
+
+nav ul li div {
+    position: relative;
+}
+img{
+    width: 85%;
+    height: 70%;
+}

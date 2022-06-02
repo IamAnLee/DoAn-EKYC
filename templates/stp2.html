@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/style.js" />
+    <link rel="stylesheet" href="../static/app.css" />
+    <link rel="stylesheet" href="../static/app.js" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2">
+                <nav>
+                    <ul>
+                        <li>
+                            <div class="home-icon">
+                                <a href="/index"><img src="../static/img/electronics.png" alt="" /></a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href=""></a>
+                            <div class="home-icon">
+                                <a href="/ekyc-stp1"><img src="../static/img/ekyc.png" alt="" /></a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-10 main">
+                <div class="title">
+                    <h1>Ekyc</h1>
+                    <h3>Nhận diện giấy tờ tùy thân</h3>
+                </div>
+                <div class="content">
+                    <section class="multi_step_form col-12">
+                        <div id="msform">
+                            <div id="menu">
+                                <fieldset>
+                                    <h3><b>Camera xác thực</b></h3>
+                                    <div id="video">
+                                        <form action="/opencamera" method="POST" enctype="multipart/form-data">
+                                            <div>
+                                                <input class="d-none" type="text" name="dirname" value="{{dirname}}" />
+                                            </div>
+                                            <br />
+                                            <button type="submit" class="btn btn-outline-success" id="wait"
+                                                onclick="myFunction()">
+                                                Mở camera
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <p><span id="word"></span></p>
+                                    <div id="loader" style="display: none"></div>
+                                    <br />
+                                    <hr />
+                                    <div id="video1">
+                                        <a href="{{url_for('stp1') }}" type="button"
+                                            class="btn btn-outline-dark">Back</a>
+                                    </div>
+                                    <br />
+                                </fieldset>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

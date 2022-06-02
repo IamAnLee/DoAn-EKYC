@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/style.js" />
+    <link rel="stylesheet" href="../static/app.css" />
+    <link rel="stylesheet" href="../static/app.js" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2">
+                <nav>
+                    <ul>
+                        <li>
+                            <div class="home-icon">
+                                <a href="/index"><img src="../static/img/electronics.png" alt="" /></a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href=""></a>
+                            <div class="home-icon">
+                                <a href="/ekyc-stp1"><img src="../static/img/ekyc.png" alt="" /></a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-10 main">
+                <div class="title">
+                    <h1>Ekyc</h1>
+                    <h3>Nhận diện giấy tờ tùy thân</h3>
+                </div>
+                <div class="content">
+                    <section class="multi_step_form col-12">
+                        <div id="msform">
+                            <h3><b>Tải lên ảnh giấy tờ tùy thân</b></h3>
+                            <medium class="text-muted">Căn cước công dân ,Hộ chiếu,CMND,Thẻ sinh viên,...</medium>
+                            <div id="menu">
+                                <fieldset>
+                                    <form action="/upload-image" method="POST" enctype="multipart/form-data">
+                                        <div class="">
+                                            <div class="custom-file">
+                                                <input type="file" name="image" id="image" class="custom-file-input" id="inputGroupFile02" />
+                                                <label for="inputGroupFile02"></label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-outline-success" onclick="showpage()">
+                                            Upload
+                                        </button>
+                                    </form>
+                                    <hr />
+                                    <div class="done_text">
+                                        <span><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i
+                                                class="fas fa-circle"></i><i class="fas fa-circle"></i><i
+                                                class="fas fa-circle"></i></span>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
