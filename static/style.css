@@ -27,6 +27,7 @@ body {}
 
 
 .btn-success {
+    background: linear-gradient(-130deg,rgb(77, 164, 235), rgb(207, 86, 191));
     margin-top: 1em;
     width: 75%;
     align-items: center;
@@ -41,20 +42,26 @@ body {}
 }
 .div{
     width: auto;
-    height: 300px;
+    /* border: 1em #fff; */
+    max-height: 300px;
+
 }
-.div > #image_upload_preview {
+#image_upload_preview {
     background-color: #ffffff;
     margin-top: 1em;
+    border: none;
     width: 30%;
-    max-height: 80%;
+    max-height: 100%;
+    /* max-height: 80%; */
+    /* border: 1px #ffffff; */
 }
 
 #image_upload_preview2 {
     background-color: #ffffff;
     margin-top: 1em;
     width: 30%;
-    max-height: 80%;
+    max-height: 100%;
+    /* max-height: 80%; */
 }
 .logo>img{
     margin-top: 15px;
@@ -126,7 +133,7 @@ nav ul li {
     cursor: pointer;
     /* box-shadow: 6px 5px; */
     /* background: rgb(96, 240, 103); */
-    background: linear-gradient(rgb(96, 240, 103), rgb(9, 145, 15));
+    background: linear-gradient(-130deg,rgb(77, 164, 235), rgb(207, 86, 191));
     text-transform: uppercase;
     transition: all .4s ease-out;
     opacity: 0,5;
@@ -134,7 +141,7 @@ nav ul li {
 
 nav ul li:after {
     position: absolute;
-    background: linear-gradient(-125deg,rgb(96, 240, 103), rgb(9, 145, 15));
+    background: linear-gradient(-130deg,rgb(77, 164, 235), rgb(207, 86, 191));
     color: rgb(10, 3, 5);
     top: 0;
     left: 70px;
